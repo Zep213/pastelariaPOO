@@ -7,14 +7,13 @@ import java.util.Map;
 public abstract class Produtos {
     String nome;
     CategoriaProduto categoria;
-    int quantidade;
-    double preco;
 
-    public Produtos(String nome, CategoriaProduto categoria, int quantidade, double preco) {
+
+
+    public Produtos(String nome, CategoriaProduto categoria) {
         this.nome = nome;
         this.categoria = categoria;
-        this.quantidade = quantidade;
-        this.preco = preco;
+
     }
 
     public String getNome() {
@@ -29,25 +28,11 @@ public abstract class Produtos {
         this.categoria = categoria;
     }
 
-    public int getQuantidade() {
-        return quantidade;
-    }
-
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
-
-    public double getPreco() {
-        return preco;
-    }
-
     @Override
     public String toString() {
         return "Produtos{" +
                 "nome='" + nome + '\'' +
                 ", categoria=" + categoria +
-                ", quantidade=" + quantidade +
-                ", preco=" + preco +
                 '}';
     }
 }
