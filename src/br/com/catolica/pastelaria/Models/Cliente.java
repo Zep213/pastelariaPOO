@@ -1,8 +1,11 @@
 package br.com.catolica.pastelaria.Models;
 
+import br.com.catolica.pastelaria.Contracts.ICliente;
+
+import java.util.ArrayList;
 import java.util.Map;
 
-public class Cliente extends Pessoa{
+public class Cliente extends Pessoa implements ICliente {
     private double saldo_pix;
     private double saldo_dinheiro;
     private double saldo_credito;
@@ -67,9 +70,11 @@ public class Cliente extends Pessoa{
             System.out.println(produto);
         }
     }
-    public void realizarPedido(Produtos produto, double saldo_credito,double saldo_debito, double saldo_dinheiro, double saldo_pix){
 
+
+    @Override
+    public boolean reaizarpedido(ArrayList<Produtos> pedido) {
+        System.out.println();
+        return false;
     }
-
-
 }

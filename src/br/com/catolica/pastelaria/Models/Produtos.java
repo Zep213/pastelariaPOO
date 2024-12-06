@@ -13,7 +13,6 @@ public abstract class Produtos {
     public Produtos(String nome, CategoriaProduto categoria) {
         this.nome = nome;
         this.categoria = categoria;
-
     }
 
     public String getNome() {

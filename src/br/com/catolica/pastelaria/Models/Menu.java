@@ -1,19 +1,19 @@
-package br.com.catolica.pastelaria.Main;
+package br.com.catolica.pastelaria.Models;
 
 import br.com.catolica.pastelaria.Contracts.ICardapio;
 import br.com.catolica.pastelaria.Enums.CategoriaProduto;
-import br.com.catolica.pastelaria.Models.Bebida;
-import br.com.catolica.pastelaria.Models.Menu;
-import br.com.catolica.pastelaria.Models.Pastel;
-import br.com.catolica.pastelaria.Models.Produtos;
+import org.w3c.dom.ls.LSOutput;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
-public class Main {
-    static ArrayList<Produtos> itens;
-    public static void main(String[] args) {
+public class Menu implements ICardapio {
+    private ArrayList<Produtos> itens;
+    public Menu(){};
+    public Menu(ArrayList<Produtos> itens) {
+        this.itens = itens != null ? itens : new ArrayList<>();
+    }
+
+    public void Cardapio(){
         itens.add(new Pastel("Pastel_de_Carne", CategoriaProduto.PASTEL,200,null,125,40));
         itens.add(new Pastel("Pastel_de_Carne_de_Sol", CategoriaProduto.PASTEL,230,null,100,40));
         itens.add(new Pastel("Pastel_de_Pizza", CategoriaProduto.PASTEL,250,null,105,40));
@@ -23,8 +23,12 @@ public class Main {
         itens.add(new Bebida("Coca-cola",CategoriaProduto.BEBIDA,300,450,false,false));
         itens.add(new Bebida("Guarana",CategoriaProduto.BEBIDA,300,450,false,false));
         itens.add(new Bebida("Cajuina",CategoriaProduto.BEBIDA,300,450,false,false));
-        itens.add(new Bebida("Fanta-Laranja",CategoriaProduto.BEBIDA,300,450,false,false));
+        itens.add(new Bebida("Franta-Laranja",CategoriaProduto.BEBIDA,300,450,false,false));
         itens.add(new Bebida("Fanta-uva",CategoriaProduto.BEBIDA,300,450,false,false));
-        
+
+    }
+
+    public ArrayList<Produtos> getItens(){
+        return itens;
     }
 }

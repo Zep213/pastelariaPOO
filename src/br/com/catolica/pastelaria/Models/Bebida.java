@@ -7,15 +7,14 @@ public class Bebida extends Produtos{
     private double preco;
     private boolean gelo;
     private boolean limao;
-    private String sabor;
 
-    public Bebida(String nome, CategoriaProduto categoria, int mls, double preco, boolean gelo, boolean limao, String sabor) {
+
+    public Bebida(String nome, CategoriaProduto categoria, int mls, double preco, boolean gelo, boolean limao) {
         super(nome, categoria);
         this.mls = mls;
         this.preco = preco;
         this.gelo = gelo;
         this.limao = limao;
-        this.sabor = sabor;
     }
 
     public int getMls() {
@@ -34,9 +33,6 @@ public class Bebida extends Produtos{
         return limao;
     }
 
-    public String getSabor() {
-        return sabor;
-    }
 
     public void setGelo(boolean gelo) {
         this.gelo = gelo;
