@@ -8,10 +8,12 @@ import java.util.Map;
 public abstract class PedidoBase {
     private Cliente cliente;
     private StatusPedido status;
+    private Produtos pedidos;
 
-    public PedidoBase(Cliente cliente, StatusPedido status) {
+    public PedidoBase(Cliente cliente, StatusPedido status,Produtos pedidos) {
         this.cliente = cliente;
         this.status = status;
+        this.pedidos = pedidos;
     }
 
     public StatusPedido getStatus() {
@@ -21,6 +23,8 @@ public abstract class PedidoBase {
     public Cliente getCliente() {
         return cliente;
     }
+
+
 
     @Override
     public String toString() {

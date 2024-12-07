@@ -12,16 +12,13 @@ public class Pastel extends Produtos{
     private int quantidade;
     private List<String> recheios;
     private double peso;
-    private double preco;
 
-    public Pastel(String nome, CategoriaProduto categoria, double peso, List<String> recheios,double preco, int quantidade) {
-        super(nome, categoria);
-        this.peso = peso;
-        this.preco = preco;
-        this.recheios = recheios != null ? new ArrayList<>(recheios) : new ArrayList<>();
+    public Pastel(String nome, CategoriaProduto categoria,double preco, List<String> recheios, int quantidade,double peso) {
+        super(nome, categoria,preco);
         this.quantidade = quantidade;
+        this.recheios = recheios;
+        this.peso = peso;
     }
-
 
     public List<String> getRecheios(){
         return recheios;
@@ -58,9 +55,9 @@ public class Pastel extends Produtos{
     @Override
     public String toString() {
         return "Pastel{" +
-                "categoria=" + categoria +
-                ", nome='" + nome + '\'' +
-                ", preco: " + preco + "R$" +
+                "categoria=" + getCategoria() +
+                ", nome='" + getNome() + '\'' +
+                ", preco: " + getPreco() + "R$" +
                 ", peso: " + peso +
                 ", recheios: " + recheios +
                 ", quantidade: " + quantidade +

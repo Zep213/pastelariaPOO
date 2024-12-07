@@ -4,25 +4,19 @@ import br.com.catolica.pastelaria.Enums.CategoriaProduto;
 
 public class Bebida extends Produtos{
     private int mls;
-    private double preco;
     private boolean gelo;
     private boolean limao;
 
 
     public Bebida(String nome, CategoriaProduto categoria, int mls, double preco, boolean gelo, boolean limao) {
-        super(nome, categoria);
+        super(nome, categoria,preco);
         this.mls = mls;
-        this.preco = preco;
         this.gelo = gelo;
         this.limao = limao;
     }
 
     public int getMls() {
         return mls;
-    }
-
-    public double getPreco() {
-        return preco;
     }
 
     public boolean isGelo() {
@@ -32,7 +26,6 @@ public class Bebida extends Produtos{
     public boolean isLimao() {
         return limao;
     }
-
 
     public void setGelo(boolean gelo) {
         this.gelo = gelo;
@@ -45,11 +38,11 @@ public class Bebida extends Produtos{
     @Override
     public String toString() {
         return "Bebida{" +
-                "categoria: " + categoria +
-                ", nome: '" + nome + '\'' +
+                "categoria: " + getCategoria() +
+                ", nome: '" + getNome() + '\'' +
                 ", limao: " + limao +
                 ", gelo: " + gelo +
-                ", preco: " + preco +"R$"+
+                ", preco: " + getPreco() +"R$"+
                 ", mls: " + mls +
                 '}';
     }

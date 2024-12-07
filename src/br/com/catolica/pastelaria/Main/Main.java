@@ -12,19 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Main {
-    static ArrayList<Produtos> itens;
     public static void main(String[] args) {
-        itens.add(new Pastel("Pastel_de_Carne", CategoriaProduto.PASTEL,200,null,125,40));
-        itens.add(new Pastel("Pastel_de_Carne_de_Sol", CategoriaProduto.PASTEL,230,null,100,40));
-        itens.add(new Pastel("Pastel_de_Pizza", CategoriaProduto.PASTEL,250,null,105,40));
-        itens.add(new Pastel("Pastel_de_Misto", CategoriaProduto.PASTEL,300,null,130,40));
-        itens.add(new Pastel("Pastel_de_Calabresa", CategoriaProduto.PASTEL,260,null,105,40));
-        itens.add(new Pastel("Pastel_de_Frango", CategoriaProduto.PASTEL,200,null,100,40));
-        itens.add(new Bebida("Coca-cola",CategoriaProduto.BEBIDA,300,450,false,false));
-        itens.add(new Bebida("Guarana",CategoriaProduto.BEBIDA,300,450,false,false));
-        itens.add(new Bebida("Cajuina",CategoriaProduto.BEBIDA,300,450,false,false));
-        itens.add(new Bebida("Fanta-Laranja",CategoriaProduto.BEBIDA,300,450,false,false));
-        itens.add(new Bebida("Fanta-uva",CategoriaProduto.BEBIDA,300,450,false,false));
-        
+
     }
 }

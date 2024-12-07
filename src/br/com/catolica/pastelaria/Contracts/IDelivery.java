@@ -1,4 +1,4 @@
 package br.com.catolica.pastelaria.Contracts;
 
-public interface IRelatorioGeral {
+public interface IDelivery {
 }
