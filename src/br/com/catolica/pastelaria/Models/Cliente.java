@@ -22,14 +22,13 @@ public class Cliente extends Pessoa implements ICliente {
     }
 
     public Cliente(String nome, String doc, double saldo_pix, double saldo_dinheiro,
-                   double saldo_credito, double saldo_debito, ArrayList<Produtos> pedido, double total_pedido) {
+                   double saldo_credito, double saldo_debito, ArrayList<Produtos> pedido) {
         super(nome, doc);
         this.saldo_pix = saldo_pix;
         this.saldo_dinheiro = saldo_dinheiro;
         this.saldo_credito = saldo_credito;
         this.saldo_debito = saldo_debito;
         this.pedido = pedido;
-        this.total_pedido = total_pedido;
     }
 
     public ArrayList<Produtos> getPedido() {
@@ -115,14 +114,27 @@ public class Cliente extends Pessoa implements ICliente {
         System.out.println("3. Crédito");
         System.out.println("4. Dinheiro");
         int escolhaPagamento = input.nextInt();
-        String descricao = "Compra total de R$" + totalCompra;
+        String descricao = "Compra total de R$" + total_pedido;
 
         switch (escolhaPagamento) {
-            case 1 -> funcionario.realizarPagamentoPix(descricao, totalCompra);
-            case 2 -> funcionario.realizarPagamentoDebito(descricao, totalCompra);
-            case 3 -> funcionario.realizarPagamentoCredito(descricao, totalCompra);
-            case 4 -> funcionario.realizarPagamentoDinheiro(descricao, totalCompra);
-            default -> throw new PagamentoException("Forma de pagamento invalida");
+            case 1:
+                funcionario.realizarPagamentoPix(descricao,total_pedido);
+                setSaldo_pix(saldo_pix -= total_pedido);
+                break;
+            case 2:
+                funcionario.realizarPagamentoDebito(descricao,total_pedido);
+                setSaldo_debito(saldo_debito -= total_pedido);
+                break;
+            case 3:
+                funcionario.realizarPagamentoCredito(descricao,total_pedido);
+                setSaldo_credito(saldo_credito -= total_pedido);
+                break;
+            case 4:
+                funcionario.realizarPagamentoDinheiro(descricao,total_pedido);
+                setSaldo_dinheiro(saldo_dinheiro -= total_pedido);
+                break;
+            default:
+                throw new PagamentoException("Forma de pagamento invalida");
         }
         System.out.println("Pagamento concluido com sucesso");
 

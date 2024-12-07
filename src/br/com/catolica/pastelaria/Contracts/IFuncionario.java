@@ -1,11 +1,10 @@
 package br.com.catolica.pastelaria.Contracts;
 
 public interface IFuncionario {
-    boolean realizarPagamentoPix(double valor);
-    boolean realizarPagamentoDinheiro(double valor);
-    boolean realizarPagamentoCredito(double valor);
-    boolean realizarPagamentoDebito(double valor);
-    boolean realizarPedido(String item, int quantidade);
+    void realizarPagamentoPix(String descricao, double valor);
+    void realizarPagamentoDebito(String descricao, double valor);
+    void realizarPagamentoCredito(String descricao, double valor);
+    void realizarPagamentoDinheiro(String descricao, double valor);
     void mostrarResumoPagamentos();
     void mostrarResumoPedidos();
 }
