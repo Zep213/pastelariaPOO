@@ -29,6 +29,10 @@ public abstract class PedidoBase {
         return pedidos;
     }
 
+    public void setStatus(StatusPedido status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "PedidoBase{" +
