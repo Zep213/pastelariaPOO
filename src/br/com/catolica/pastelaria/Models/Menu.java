@@ -12,7 +12,7 @@ public class Menu implements ICardapio {
 
     public Menu() {}
 
-    public void CardapioPastel() {
+    public void Cardapio(ArrayList<Produtos> cardapio) {
         produtos.add(new Pastel("Pastel_de_Carne", CategoriaProduto.PASTEL, 200, null, 45, 40));
         produtos.add(new Pastel("Pastel_de_Carne_de_Sol", CategoriaProduto.PASTEL, 230, null, 100, 40));
         produtos.add(new Pastel("Pastel_de_Pizza", CategoriaProduto.PASTEL, 250, null, 105, 40));
@@ -40,7 +40,7 @@ public class Menu implements ICardapio {
     }
 
     @Override
-    public void mostrarCardapio() {
+    public void mostrarCardapio(ArrayList<Produtos> cardapio) {
         for (Produtos produto : produtos) {
             System.out.println(produto);
         }

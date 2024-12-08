@@ -16,8 +16,9 @@ public class Delivery extends PedidoBase implements IDelivery {
     private ArrayList<Produtos> pedidoDelivery = new ArrayList<>();
 
 
+
     public Delivery(Cliente cliente, StatusPedido status, ArrayList<Produtos> pedidos, StatusPedido status1, String endereco, double valor, boolean finalizada, String descricao, int idEntrega) {
-        super(cliente, status, pedidos);
+        super(cliente, status);
         this.status = status;
         this.endereco = endereco;
         this.valor = valor;

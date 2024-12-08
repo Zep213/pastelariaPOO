@@ -9,9 +9,10 @@ public class Presencial extends PedidoBase{
     private FormaDePagamento pagamento;
     private String descricao;
     private LocalDate dataPedido;
+    ArrayList<Produtos> pedidos;
 
     public Presencial(Cliente cliente, StatusPedido status, ArrayList<Produtos> pedidos, FormaDePagamento pagamento, String descricao, LocalDate dataPedido) {
-        super(cliente, status, pedidos);
+        super(cliente, status);
         this.pagamento = pagamento;
         this.descricao = descricao;
         this.dataPedido = dataPedido;

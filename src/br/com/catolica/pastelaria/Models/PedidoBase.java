@@ -11,10 +11,9 @@ public abstract class PedidoBase {
     private StatusPedido status;
     private ArrayList<Produtos> pedidos;
 
-    public PedidoBase(Cliente cliente, StatusPedido status,ArrayList<Produtos> pedidos) {
+    public PedidoBase(Cliente cliente, StatusPedido status) {
         this.cliente = cliente;
         this.status = status;
-        this.pedidos = pedidos;
     }
 
     public StatusPedido getStatus() {

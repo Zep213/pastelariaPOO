@@ -7,6 +7,6 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public interface ICliente {
-    boolean reaizarPedido(ArrayList<Produtos> menu);
+    boolean realizarPedido(ArrayList<Produtos> menu);
     void finalizarCompra(Funcionario funcionario);
 }

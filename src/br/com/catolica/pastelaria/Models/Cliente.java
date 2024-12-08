@@ -72,7 +72,7 @@ public class Cliente extends Pessoa implements ICliente {
     }
 
     @Override
-    public boolean reaizarPedido(ArrayList<Produtos> menu) {
+    public boolean realizarPedido(ArrayList<Produtos> menu) {
         Scanner input = new Scanner(System.in);
         boolean continuar = true;
 

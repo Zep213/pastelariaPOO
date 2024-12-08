@@ -6,5 +6,5 @@ import java.util.ArrayList;
 
 public interface ICardapio {
     void adicionarProduto(Produtos produto);
-    void mostrarCardapio();
+    void mostrarCardapio(ArrayList<Produtos> cardapio);
 }
